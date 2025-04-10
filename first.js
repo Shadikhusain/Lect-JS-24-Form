@@ -57,14 +57,20 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const first = document.getElementById('first');
-    console.log(first.value);
-    const second = document.getElementById('second');
-    console.log(second.value);
-    const third = document.getElementById('third');
-    console.log(third.value);
+    //     const first = document.getElementById('first');
+    //     console.log(first.value);
+    //     const second = document.getElementById('second');
+    //     console.log(second.value);
+    //     const third = document.getElementById('third');
+    //     console.log(third.value);
 
-    const result = document.getElementById('result');
-    result.innerText = `${first.value} ${second.value} is a good boy. age is ${third.value}`;
-    document.body.append(result);
+
+    //############## Itne Saare input field nahi likhne use (formData) ####################
+    const data = new FormData(form)
+    console.log(Array.from(data.keys()));
+    // console.log(Array.from(data.values()));
+
+    //     const result = document.getElementById('result');
+    //     result.innerText = `${first.value} ${second.value} is a good boy. age is ${third.value}`;
+    //     document.body.append(result);
 })
